@@ -2,7 +2,7 @@
  * Родительский класс для реализации пространственной
  * ориентации.
  * 
- * Версия: 1.0.0.
+ * Версия: 1.0.1.
  * Автор: Ivan Barinov <bari_ivan@mail.ru>
  */
 
@@ -12,7 +12,7 @@
 #include "IMUCommon.h"
 
 // Точка переполнения функций millis и micros аппаратной платформы Arduino
-#define KDR_ULONG_MAXVALUE 4294967295
+#define KDR_ULONG_MAXVALUE 4294967295U
 
 class IMUOrientation
 {

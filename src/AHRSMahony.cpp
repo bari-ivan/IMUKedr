@@ -35,7 +35,7 @@ void AHRSMahony::init() {
     _q2 = 0;
     _q3 = 0;
     
-    for (uint8_t i = 0; i < sizeof(eInt); i++) {
+    for (uint8_t i = 0; i < 3; i++) {
       eInt[i] = 0.0f;
     }
     

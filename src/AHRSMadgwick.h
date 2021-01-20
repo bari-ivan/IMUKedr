@@ -1,7 +1,7 @@
 /*
  * Класс для реализации фильтра Маджвика.
  * 
- * Версия: 1.0.0.
+ * Версия: 1.0.1.
  * Автор: Ivan Barinov <bari_ivan@mail.ru>
  */
 
@@ -50,13 +50,13 @@ class AHRSMadgwick : public AHRSFilter
     float invSqrt(float x);
     
     // Кватернион 0
-    volatile float _q0 = 1.0f;
+    volatile float _q0;
     // Кватернион 1
-    volatile float _q1 = 0.0f;
+    volatile float _q1;
     // Кватернион 2
-    volatile float _q2 = 0.0f;
+    volatile float _q2;
     // Кватернион 3
-    volatile float _q3 = 0.0f;
+    volatile float _q3;
     // Корректирующий коэффициент бета
     float _beta;
     // Корректирующий коэффициент зета

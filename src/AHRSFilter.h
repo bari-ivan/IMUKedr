@@ -2,7 +2,7 @@
  * Родительский класс для реализации работы
  * модуля в режиме курсовертикали.
  * 
- * Версия: 1.0.0.
+ * Версия: 1.0.1.
  * Автор: Ivan Barinov <bari_ivan@mail.ru>
  */
 
@@ -16,29 +16,25 @@ class AHRSFilter : public IMUOrientation
 {
 
   public:
-    // Конструктор класса
-    AHRSFilter();
-    // Деструктор класса
-    ~AHRSFilter();
     // Сброс данных и инициализация фильтра
-    virtual void init();
+    virtual void init() = 0;
     // Обновление данных фильтра
     virtual void update(float ax, float ay, float az, float gx, float gy, float gz, 
-                float mx, float my, float mz);
+                float mx, float my, float mz) = 0;
     // Получение угла тангажа в радианах
-    virtual float getPitchRad();
+    virtual float getPitchRad() = 0;
     // Получение угла крена в радианах
-    virtual float getRollRad();
+    virtual float getRollRad() = 0;
     // Получение угла рыскания в радианах
-    virtual float getYawRad();
+    virtual float getYawRad() = 0;
     // Получение угла тангажа в градусах
-    virtual float getPitchDeg();
+    virtual float getPitchDeg() = 0;
     // Получение угла крена в градусах
-    virtual float getRollDeg();
+    virtual float getRollDeg() = 0;
     // Получение угла рыскания в градусах
-    virtual float getYawDeg();
+    virtual float getYawDeg() = 0;
     // Получение положения в виде кватерниона
-    virtual void getQuaternion(float * qW, float * qX, float * qY, float * qZ);
+    virtual void getQuaternion(float * qW, float * qX, float * qY, float * qZ) = 0;
 
   protected:
 
